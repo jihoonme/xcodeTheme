@@ -9,19 +9,19 @@ let package = Package(
         .executable(name: "uninstall", targets: ["Uninstall"])
     ],
     dependencies: [
-        .package(url: "https://github.com/pelagornis/plfile.git", from: "1.0.5")
+        .package(url: "https://github.com/pelagornis/swift-file", from: "1.1.0")
     ],
     targets: [
         .executableTarget(
             name: "Install",
             dependencies: [
-                .product(name: "File", package: "plfile")
+                .product(name: "File", package: "swift-file")
             ]
         ),
         .executableTarget(
             name: "Uninstall",
             dependencies: [
-                .product(name: "File", package: "plfile")
+                .product(name: "File", package: "swift-file")
             ]
         )
     ]
